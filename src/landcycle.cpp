@@ -5,6 +5,7 @@
 #include "triomes.hpp"
 
 #include <bitset>
+#include <iostream>
 
 LandCycle::LandCycle() {}
 
@@ -14,11 +15,16 @@ void LandCycle::addLands(std::vector<Land> &manabase, ColorCombination colors) c
 
     for (Land i : lands)
     {
-        for (int color = 0; color < 5; ++color) {
-            std::bitset<5> land_colors = getColors(i.colors);
-            if (land_colors[color] && color_bits[color]) {
-                manabase.push_back(i);
+        std::bitset<5> land_colors = getColors(i.colors);
+        int color = 0;
+        for (; color < 5; ++color) {
+            if (land_colors[color] && !color_bits[color]) {
+                break;
             }
+        }
+        if (color == 5) {
+            std::cout << "Adding: " << i.name << std::endl;
+            manabase.push_back(i);
         }
     }
 }
@@ -26,54 +32,82 @@ void LandCycle::addLands(std::vector<Land> &manabase, ColorCombination colors) c
 DualLandCycle::DualLandCycle(DualCycle _cycle) : cycle(_cycle), LandCycle()
 {
     const Land* CycleData;
-    switch (cycle)
+
+    // std::cout << _cycle << std::endl;
+    switch (_cycle)
     {
         case DualCycle::Surveil:
             CycleData = &SurveilLandData[0];
+            break;
         case DualCycle::Gain:
             CycleData = &GainLandData[0];
+            break;
         case DualCycle::Fast:
             CycleData = &FastLandData[0];
+            break;
         case DualCycle::Pain:
             CycleData = &PainLandData[0];
+            break;
         case DualCycle::FetchableTapped:
             CycleData = &FetchableTappedLandData[0];
+            break;
         case DualCycle::Slow:
             CycleData = &SlowLandData[0];
+            break;
         case DualCycle::Reveal:
             CycleData = &RevealLandData[0];
+            break;
         case DualCycle::KaldheimSnow:
             CycleData = &KaldheimSnowLandData[0];
+            break;
         case DualCycle::Pathway:
             CycleData = &PathwayLandData[0];
+            break;
         case DualCycle::Scry:
             CycleData = &ScryLandData[0];
+            break;
         case DualCycle::Shock:
             CycleData = &ShockLandData[0];
+            break;
         case DualCycle::Guildgate:
             CycleData = &GuildgateLandData[0];
+            break;
         case DualCycle::Check:
             CycleData = &CheckLandData[0];
+            break;
         case DualCycle::Generic:
             CycleData = &GenericLandData[0];
+            break;
         case DualCycle::Fetch:
             CycleData = &FetchLandData[0];
+            break;
         case DualCycle::Artifact:
             CycleData = &ArtifactLandData[0];
+            break;
         case DualCycle::Filter:
             CycleData = &FilterLandData[0];
+            break;
         case DualCycle::Bounce:
             CycleData = &BounceLandData[0];
+            break;
         case DualCycle::Battlebond:
             CycleData = &BattlebondLandData[0];
+            break;
         case DualCycle::OdysseyFilter:
             CycleData = &OdysseyFilterLandData[0];
+            break;
         case DualCycle::Dual:
             CycleData = &DualLandData[0];
+            break;
+        default:
+            throw std::invalid_argument("Invalid enum value");
+            break;
     };
 
     for (int i = 0; i < 10; ++i) {
-        lands[i] = CycleData[i];
+        this->lands[i] = CycleData[i];
+
+        // std::cout << "Land: " << this->lands[i].name << std::endl;
     }
 }
 
@@ -88,10 +122,13 @@ TriomeCycle::TriomeCycle(TriLandCycle _cycle) : cycle(_cycle), LandCycle()
             CycleData = &TriCycleLandData[0];
         case TriLandCycle::Tri:
             CycleData = &TriLandData[0];
+        default:
+            throw std::invalid_argument("Invalid enum value");
     };
 
     for (int i = 0; i < 10; ++i) {
-        lands[i] = CycleData[i];
+        this->lands[i] = CycleData[i];
+        // std::cout << "Land: " << this->lands[i].name << std::endl;
     }
 }
 

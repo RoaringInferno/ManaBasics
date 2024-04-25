@@ -4,7 +4,7 @@
 #include "land.hpp"
 #include <string>
 
-const Land TriCycleLandData[] = {
+const Land TriCycleLandData[10] = {
     {"Indatha Triome", ColorCombination::Abzan}, //White/Black/Green
     {"Spara's Headquarters", ColorCombination::Bant}, //White/Blue/Green
     {"Raffine's Tower", ColorCombination::Esper}, //White/Blue/Black
@@ -17,7 +17,7 @@ const Land TriCycleLandData[] = {
     {"Ketria Triome", ColorCombination::Temur}, //Blue/Red/Green
 };
 
-const Land TriLandData[] = {
+const Land TriLandData[10] = {
     {"Seaside Citadel", ColorCombination::Bant}, //White/Blue/Green
     {"Arcane Sanctum", ColorCombination::Esper}, //White/Blue/Black
     {"Crumbling Necropolis", ColorCombination::Grixis}, //Blue/Black/Red

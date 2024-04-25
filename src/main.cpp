@@ -11,29 +11,52 @@ int main() {
     ColorCombination colors = stringToColor(color_string);
     ManaBase manabase(colors);
 
+    // std::cout << "Color: " << colors << std::endl;
+
     std::string input;
     while (true) {
-        std::cout << "Land Cycle Type: (Bi or Tri) ";
-        std::cin >> input;
-        if (input == "q") { break; }
-        bool is_bicycle = input == "Bi";
+        bool is_dual_land = false;
+        bool run = true;
+        while (true) {
+            std::cout << "Land Cycle Type: (Bi or Tri, q to quit) ";
+            std::cin >> input;
+            if (input == "Bi") {
+                is_dual_land = true;
+                break;
+            } else if (input == "Tri") {
+                is_dual_land = false;
+                break;
+            } else if (input == "q") {
+                run = false;
+                break;
+            } else {
+                continue;
+            }
+        }
+        if (!run) { break; }
+        // std::cout << "Type: " << (is_dual_land ? "Bi" : "Tri") << std::endl;
 
-        std::cout << "Land Cycle Name: ";
-        if (is_bicycle) {
-            std::cout << " (Surveil, Gain, Fast, Pain, FetchableTapped, Slow, Reveal, KaldheimSnow, Pathway, Scry, Shock, Guildgate, Check, Generic, Fetch, Artifact, Filter, Bounce, Battlebond, OdysseyFilter, Dual) ";
+        std::cout << "Land Cycle Name (q to quit): ";
+        if (is_dual_land) {
+            std::cout << "(Surveil, Gain, Fast, Pain, FetchableTapped, Slow, Reveal, KaldheimSnow, Pathway, Scry, Shock, Guildgate, Check, Generic, Fetch, Artifact, Filter, Bounce, Battlebond, OdysseyFilter, Dual) ";
         } else {
-            std::cout << " (TriCycle, Tri) ";
+            std::cout << "(TriCycle, Tri) ";
         }
         std::cin >> input;
         if (input == "q") { break; }
-        if (is_bicycle) {
-            DualLandCycle cycle(getDualCycle(input));
+        if (is_dual_land) {
+            DualCycle cycle_id = getDualCycle(input);
+            // std::cout << "Land Cycle: " << cycle_id << std::endl;
+            DualLandCycle cycle(cycle_id);
             manabase.addLandCycle(cycle);
         } else {
-            TriomeCycle cycle(getTriLandCycle(input));
+            TriLandCycle cycle_id = getTriLandCycle(input);
+            // std::cout << "Land Cycle: " << cycle_id << std::endl;
+            TriomeCycle cycle(cycle_id);
             manabase.addLandCycle(cycle);
         }
     }
+    std::cout << "Total Manabase: (Type anything to continue)\n";
     manabase.exportOut();
 
     std::cin >> input;

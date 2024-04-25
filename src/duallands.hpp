@@ -3,7 +3,7 @@
 #include "mana.hpp"
 #include "land.hpp"
 
-const Land SurveilLandData[] = {
+const Land SurveilLandData[10] = {
     {"Meticulous Archive", ColorCombination::Azorius},
     {"Undercity Sewers", ColorCombination::Dimir},
     {"Raucous Theater", ColorCombination::Rakdos},
@@ -16,7 +16,7 @@ const Land SurveilLandData[] = {
     {"Hedge Maze", ColorCombination::Simic}
 };
 
-const Land GainLandData[] = {
+const Land GainLandData[10] = {
     {"Tranquil Cove", ColorCombination::Azorius},
     {"Dismal Backwater", ColorCombination::Dimir},
     {"Bloodfell Caves", ColorCombination::Rakdos},
@@ -30,7 +30,7 @@ const Land GainLandData[] = {
     {"Thornwood Falls", ColorCombination::Simic}
 };
 
-const Land FastLandData[] = {
+const Land FastLandData[10] = {
     {"Seachrome Coast", ColorCombination::Azorius},
     {"Darkslick Shores", ColorCombination::Dimir},
     {"Blackcleave Cliffs", ColorCombination::Rakdos},
@@ -43,7 +43,7 @@ const Land FastLandData[] = {
     {"Botanical Sanctum", ColorCombination::Simic}
 };
 
-const Land PainLandData[] = {
+const Land PainLandData[10] = {
     {"Adarkar Wastes", ColorCombination::Azorius},
     {"Underground River", ColorCombination::Dimir},
     {"Sulfurous Springs", ColorCombination::Rakdos},
@@ -56,7 +56,7 @@ const Land PainLandData[] = {
     {"Yavimaya Coast", ColorCombination::Simic}
 };
 
-const Land FetchableTappedLandData[] = {
+const Land FetchableTappedLandData[10] = {
     {"Idyllic Beachfront", ColorCombination::Azorius},
     {"Contaminated Aquifer", ColorCombination::Dimir},
     {"Geothermal Bog", ColorCombination::Rakdos},
@@ -69,7 +69,7 @@ const Land FetchableTappedLandData[] = {
     {"Tangled Islet", ColorCombination::Simic}
 };
 
-const Land SlowLandData[] = {
+const Land SlowLandData[10] = {
     {"Deserted Beach", ColorCombination::Azorius},
     {"Shipwreck Marsh", ColorCombination::Dimir},
     {"Haunted Ridge", ColorCombination::Rakdos},
@@ -82,7 +82,7 @@ const Land SlowLandData[] = {
     {"Dreamroot Cascade", ColorCombination::Simic}
 };
 
-const Land RevealLandData[] = {
+const Land RevealLandData[10] = {
     // Allied colored
     {"Port Town", ColorCombination::Azorius},
     {"Choked Estuary", ColorCombination::Dimir},
@@ -98,7 +98,7 @@ const Land RevealLandData[] = {
     {"Vineglimmer Snarl", ColorCombination::Simic}
 };
 
-const Land KaldheimSnowLandData[] = {
+const Land KaldheimSnowLandData[10] = {
     {"Glacial Floodplain", ColorCombination::Azorius},
     {"Ice Tunnel", ColorCombination::Dimir},
     {"Sulfurous Mire", ColorCombination::Rakdos},
@@ -111,7 +111,7 @@ const Land KaldheimSnowLandData[] = {
     {"Rimewood Falls", ColorCombination::Simic}
 };
 
-const Land PathwayLandData[] = {
+const Land PathwayLandData[10] = {
     {"Hengegate Pathway // Mistgate Pathway", ColorCombination::Azorius},
     {"Clearwater Pathway // Murkwater Pathway", ColorCombination::Dimir},
     {"Blightstep Pathway // Searstep Pathway", ColorCombination::Rakdos},
@@ -124,7 +124,7 @@ const Land PathwayLandData[] = {
     {"Barkchannel Pathway // Tidechannel Pathway", ColorCombination::Simic},
 };
 
-const Land ScryLandData[] = {
+const Land ScryLandData[10] = {
     {"Temple of Enlightenment", ColorCombination::Azorius},
     {"Temple of Deceit", ColorCombination::Dimir},
     {"Temple of Malice", ColorCombination::Rakdos},
@@ -137,7 +137,7 @@ const Land ScryLandData[] = {
     {"Temple of Mystery", ColorCombination::Simic}
 };
 
-const Land ShockLandData[] = {
+const Land ShockLandData[10] = {
     {"Hallowed Fountain", ColorCombination::Azorius},
     {"Watery Grave", ColorCombination::Dimir},
     {"Blood Crypt", ColorCombination::Rakdos},
@@ -150,7 +150,7 @@ const Land ShockLandData[] = {
     {"Breeding Pool", ColorCombination::Simic}
 };
 
-const Land GuildgateLandData[] = {
+const Land GuildgateLandData[10] = {
     {"Azorius Guildgate", ColorCombination::Azorius},
     {"Dimir Guildgate", ColorCombination::Dimir},
     {"Rakdos Guildgate", ColorCombination::Rakdos},
@@ -163,7 +163,7 @@ const Land GuildgateLandData[] = {
     {"Simic Guildgate", ColorCombination::Simic}
 };
 
-const Land CheckLandData[] = {
+const Land CheckLandData[10] = {
     {"Glacial Fortress", ColorCombination::Azorius},
     {"Drowned Catacomb", ColorCombination::Dimir},
     {"Dragonskull Summit", ColorCombination::Rakdos},
@@ -176,7 +176,7 @@ const Land CheckLandData[] = {
     {"Hinterland Harbor", ColorCombination::Simic}
 };
 
-const Land GenericLandData[] = {
+const Land GenericLandData[10] = {
     {"Meandering River", ColorCombination::Azorius},
     {"Submerged Boneyard", ColorCombination::Dimir},
     {"Cinder Barrens", ColorCombination::Rakdos},
@@ -189,7 +189,7 @@ const Land GenericLandData[] = {
     {"Woodland Stream", ColorCombination::Simic}
 };
 
-const Land FetchLandData[] = {
+const Land FetchLandData[10] = {
     {"Flooded Strand", ColorCombination::Azorius},
     {"Polluted Delta", ColorCombination::Dimir},
     {"Bloodstained Mire", ColorCombination::Rakdos},
@@ -202,7 +202,7 @@ const Land FetchLandData[] = {
     {"Misty Rainforest", ColorCombination::Simic}
 };
 
-const Land ArtifactLandData[] = {
+const Land ArtifactLandData[10] = {
     {"Razortide Bridge", ColorCombination::Azorius},
     {"Mistvault Bridge", ColorCombination::Dimir},
     {"Drossforge Bridge", ColorCombination::Rakdos},
@@ -215,7 +215,7 @@ const Land ArtifactLandData[] = {
     {"Tanglepool Bridge", ColorCombination::Simic}
 };
 
-const Land FilterLandData[] = {
+const Land FilterLandData[10] = {
     {"Mystic Gate", ColorCombination::Azorius},
     {"Sunken Ruins", ColorCombination::Dimir},
     {"Graven Cairns", ColorCombination::Rakdos},
@@ -228,7 +228,7 @@ const Land FilterLandData[] = {
     {"Flooded Grove", ColorCombination::Simic}
 };
 
-const Land BounceLandData[] = {
+const Land BounceLandData[10] = {
     {"Azorius Chancery", ColorCombination::Azorius},
     {"Dimir Aqueduct", ColorCombination::Dimir},
     {"Rakdos Carnarium", ColorCombination::Rakdos},
@@ -241,7 +241,7 @@ const Land BounceLandData[] = {
     {"Simic Growth Chamber", ColorCombination::Simic}
 };
 
-const Land BattlebondLandData[] = {
+const Land BattlebondLandData[10] = {
     {"Sea of Clouds", ColorCombination::Azorius},
     {"Morphic Pool", ColorCombination::Dimir},
     {"Luxury Suite", ColorCombination::Rakdos},
@@ -254,7 +254,7 @@ const Land BattlebondLandData[] = {
     {"Rejuvenating Springs", ColorCombination::Simic}
 };
 
-const Land OdysseyFilterLandData[] = {
+const Land OdysseyFilterLandData[10] = {
     {"Skycloud Expanse", ColorCombination::Azorius},
     {"Darkwater Catacombs", ColorCombination::Dimir},
     {"Shadowblood Ridge", ColorCombination::Rakdos},
@@ -267,7 +267,7 @@ const Land OdysseyFilterLandData[] = {
     {"Overflowing Basin", ColorCombination::Simic}
 };
 
-const Land DualLandData[] = {
+const Land DualLandData[10] = {
     {"Tundra", ColorCombination::Azorius},
     {"Underground Sea", ColorCombination::Dimir},
     {"Badlands", ColorCombination::Rakdos},
