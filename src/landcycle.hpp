@@ -1,20 +1,12 @@
 #pragma once
 
-#include "land.hpp"
 #include "mana.hpp"
-#include <stdexcept>
-#include <vector>
 
-class LandCycle {
-public:
-    Land lands[10];
+#include <string>
 
-    LandCycle();
 
-    void addLands(std::vector<Land> &manabase, ColorCombination colors) const;
-};
-
-enum DualCycle {
+enum LandCycle {
+    Basic,
     Surveil,
     Gain,
     Fast,
@@ -35,35 +27,9 @@ enum DualCycle {
     Bounce,
     Battlebond,
     OdysseyFilter,
-    Dual
-};
-
-DualCycle getDualCycle(const std::string& str);
-
-std::string exportDualCycle(DualCycle cycle);
-
-class DualLandCycle : public LandCycle {
-public:
-    DualCycle cycle;
-
-    DualLandCycle(DualCycle _cycle = DualCycle::Generic);
-    ~DualLandCycle();  
-};
-
-enum TriLandCycle {
+    Dual,
     TriCycle,
-    Tri,
+    Tri
 };
 
-TriLandCycle getTriLandCycle(const std::string& str);
-
-std::string exportTriLandCycle(TriLandCycle cycle);
-
-
-class TriomeCycle : public LandCycle {
-public:
-    TriLandCycle cycle;
-
-    TriomeCycle(TriLandCycle _cycle = TriLandCycle::Tri);
-    ~TriomeCycle();
-};
+LandCycle getLandCycle(std::string name);
