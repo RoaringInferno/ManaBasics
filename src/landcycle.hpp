@@ -1,20 +1,13 @@
 #pragma once
 
-#include "land.hpp"
 #include "mana.hpp"
-#include <stdexcept>
-#include <vector>
 
-class LandCycle {
-public:
-    Land lands[10];
+#include <unordered_map>
+#include <string>
 
-    LandCycle();
 
-    void addLands(std::vector<Land> &manabase, ColorCombination colors) const;
-};
-
-enum DualCycle {
+enum ManaSourceSignature {
+    Basic,
     Surveil,
     Gain,
     Fast,
@@ -35,35 +28,69 @@ enum DualCycle {
     Bounce,
     Battlebond,
     OdysseyFilter,
-    Dual
-};
-
-DualCycle getDualCycle(const std::string& str);
-
-std::string exportDualCycle(DualCycle cycle);
-
-class DualLandCycle : public LandCycle {
-public:
-    DualCycle cycle;
-
-    DualLandCycle(DualCycle _cycle = DualCycle::Generic);
-    ~DualLandCycle();  
-};
-
-enum TriLandCycle {
+    Dual,
     TriCycle,
     Tri,
+    Talisman,
+    Signet,
+    Medallion,
+    Cluestone,
+    Diamond,
+    Keyrune,
+    Locket,
+    Obelisk,
+    Banner,
+    Crystal,
+    Monument,
+    Borderpost,
+    Totem,
+    Cameo,
+    Ramos,
+    AmonkhetMonument,
+    TriSacFetch,
+    DesertPing
 };
 
-TriLandCycle getTriLandCycle(const std::string& str);
-
-std::string exportTriLandCycle(TriLandCycle cycle);
-
-
-class TriomeCycle : public LandCycle {
-public:
-    TriLandCycle cycle;
-
-    TriomeCycle(TriLandCycle _cycle = TriLandCycle::Tri);
-    ~TriomeCycle();
+static std::unordered_map<std::string, ManaSourceSignature> const string_to_ms = {
+    {"Basic", ManaSourceSignature::Basic},
+    {"Surveil", ManaSourceSignature::Surveil},
+    {"Gain", ManaSourceSignature::Gain},
+    {"Fast", ManaSourceSignature::Fast},
+    {"Pain", ManaSourceSignature::Pain},
+    {"FetchableTapped", ManaSourceSignature::FetchableTapped},
+    {"Slow", ManaSourceSignature::Slow},
+    {"Reveal", ManaSourceSignature::Reveal},
+    {"KaldheimSnow", ManaSourceSignature::KaldheimSnow},
+    {"Pathway", ManaSourceSignature::Pathway},
+    {"Scry", ManaSourceSignature::Scry},
+    {"Shock", ManaSourceSignature::Shock},
+    {"Guildgate", ManaSourceSignature::Guildgate},
+    {"Check", ManaSourceSignature::Check},
+    {"Generic", ManaSourceSignature::Generic},
+    {"Fetch", ManaSourceSignature::Fetch},
+    {"Artifact", ManaSourceSignature::Artifact},
+    {"Filter", ManaSourceSignature::Filter},
+    {"Bounce", ManaSourceSignature::Bounce},
+    {"Battlebond", ManaSourceSignature::Battlebond},
+    {"OdysseyFilter", ManaSourceSignature::OdysseyFilter},
+    {"Dual", ManaSourceSignature::Dual},
+    {"TriCycle", ManaSourceSignature::TriCycle},
+    {"Tri", ManaSourceSignature::Tri},
+    {"Talisman", ManaSourceSignature::Talisman},
+    {"Signet", ManaSourceSignature::Signet},
+    {"Medallion", ManaSourceSignature::Medallion},
+    {"Cluestone", ManaSourceSignature::Cluestone},
+    {"Diamond", ManaSourceSignature::Diamond},
+    {"Keyrune", ManaSourceSignature::Keyrune},
+    {"Locket", ManaSourceSignature::Locket},
+    {"Obelisk", ManaSourceSignature::Obelisk},
+    {"Banner", ManaSourceSignature::Banner},
+    {"Crystal", ManaSourceSignature::Crystal},
+    {"Monument", ManaSourceSignature::Monument},
+    {"Borderpost", ManaSourceSignature::Borderpost},
+    {"Totem", ManaSourceSignature::Totem},
+    {"Cameo", ManaSourceSignature::Cameo},
+    {"Ramos", ManaSourceSignature::Ramos}
 };
+
+ManaSourceSignature getManaSourceSignature(std::string name);

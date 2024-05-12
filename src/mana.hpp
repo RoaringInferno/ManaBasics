@@ -4,59 +4,57 @@
 #define MANA_HPP
 
 #include <string>
-#include <bitset>
 
-enum ColorCombination {
-    White,
-    Blue,
-    Black,
-    Red,
-    Green,
-    Colorless,
+enum ColorCombination
+{
+    WHITE,
+    BLUE,
+    BLACK,
+    RED,
+    GREEN,
+    COLORLESS,
 
-    Azorius, //White/Blue
-    Boros, //Red/White
-    Dimir, //Blue/Black
-    Golgari, //Black/Green
-    Gruul, //Red/Green
-    Izzet, //Blue/Red
-    Orzhov, //White/Black
-    Rakdos, //Black/Red
-    Selesnya, //White/Green
-    Simic, //Blue/Green
+    AZORIUS, //White/Blue
+    BOROS, //Red/White
+    DIMIR, //Blue/Black
+    GOLGARI, //Black/Green
+    GRUUL, //Red/Green
+    IZZET, //Blue/Red
+    ORZHOV, //White/Black
+    RAKDOS, //Black/Red
+    SELESNYA, //White/Green
+    SIMIC, //Blue/Green
     
-    Abzan, //White/Black/Green
-    Bant, //White/Blue/Green
-    Esper, //White/Blue/Black
-    Grixis, //Blue/Black/Red
-    Jeskai, //White/Blue/Red
-    Jund, //Black/Red/Green
-    Mardu, //White/Black/Red
-    Naya, //White/Red/Green
-    Sultai, //Blue/Black/Green
-    Temur, //Blue/Red/Green
+    ABZAN, //White/Black/Green
+    BANT, //White/Blue/Green
+    ESPER, //White/Blue/Black
+    GRIXIS, //Blue/Black/Red
+    JESKAI, //White/Blue/Red
+    JUND, //Black/Red/Green
+    MARDU, //White/Black/Red
+    NAYA, //White/Red/Green
+    SULTAI, //Blue/Black/Green
+    TEMUR, //Blue/Red/Green
 
     
-    Glint, //No White
-    Dune, //No Blue
-    Ink, //No Black
-    Witch, //No Red
-    Yore, //No Green
+    GLINT, //No White
+    DUNE, //No Blue
+    INK, //No Black
+    WITCH, //No Red
+    YORE, //No Green
 
-    FiveColor //All Colors
+    FIVECOLOR //All Colors
 };
 
-std::string colorToString(ColorCombination color);
+bool contains(ColorCombination color, ColorCombination contains);
 
-ColorCombination stringToColor(const std::string& colorString);
+constexpr bool hasWhite(const ColorCombination color);
+constexpr bool hasBlue(const ColorCombination color);
+constexpr bool hasBlack(const ColorCombination color);
+constexpr bool hasRed(const ColorCombination color);
+constexpr bool hasGreen(const ColorCombination color);   
 
-constexpr bool hasWhite(ColorCombination color);
-constexpr bool hasBlue(ColorCombination color);
-constexpr bool hasBlack(ColorCombination color);
-constexpr bool hasRed(ColorCombination color);
-constexpr bool hasGreen(ColorCombination color);
-
-
-std::bitset<5> getColors(ColorCombination color);
+std::string colorToString(const ColorCombination color);
+ColorCombination stringToColor(std::string colorString);
 
 #endif

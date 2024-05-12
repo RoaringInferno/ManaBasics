@@ -1,527 +1,143 @@
 #include "mana.hpp"
 
-std::string colorToString(ColorCombination color) {
-    switch(color) {
-        case White:
-            return "White";
-        case Blue:
-            return "Blue";
-        case Black:
-            return "Black";
-        case Red:
-            return "Red";
-        case Green:
-            return "Green";
-        case Colorless:
-            return "Colorless";
-        
-        case Azorius: //White/Blue
-            return "Azorius";
-        case Boros: //Red/White
-            return "Boros";
-        case Dimir: //Blue/Black
-            return "Dimir";
-        case Golgari: //Black/Green
-            return "Golgari";
-        case Gruul: //Red/Green
-            return "Gruul";
-        case Izzet: //Blue/Red
-            return "Izzet";
-        case Orzhov: //White/Black
-            return "Orzhov";
-        case Rakdos: //Black/Red
-            return "Rakdos";
-        case Selesnya: //White/Green
-            return "Selesnya";
-        case Simic: //Blue/Green
-            return "Simic";
-        
-        case Abzan: //White/Black/Green
-            return "Abzan";
-        case Bant: //White/Blue/Green
-            return "Bant";
-        case Esper: //White/Blue/Black
-            return "Esper";
-        case Grixis: //Blue/Black/Red
-            return "Grixis";
-        case Jeskai: //White/Blue/Red
-            return "Jeskai";
-        case Jund: //Black/Red/Green
-            return "Jund";
-        case Mardu: //White/Black/Red
-            return "Mardu";
-        case Naya: //White/Red/Green
-            return "Naya";
-        case Sultai: //Blue/Black/Green
-            return "Sultai";
-        case Temur: //Blue/Red/Green
-            return "Temur";
-        
-        case Glint: //No White
-            return "Glint";
-        case Dune: //No Blue
-            return "Dune";
-        case Ink: //No Black
-            return "Ink";
-        case Witch: //No Red
-            return "Witch";
-        case Yore: //No Green
-            return "Yore";
-        
-        case FiveColor: //All Colors
-            return "FiveColor";
-        default:
-            return "";
-    };
+struct ColorCombinationData {
+    std::string name;
+    bool colors[5];
 };
-ColorCombination stringToColor(const std::string& colorString) {
+
+const ColorCombinationData colorData[] = { // WUBRG
+    {"White", {true, false, false, false, false}},
+    {"Blue", {false, true, false, false, false}},
+    {"Black", {false, false, true, false, false}},
+    {"Red", {false, false, false, true, false}},
+    {"Green", {false, false, false, false, true}},
+    {"Colorless", {false, false, false, false, false}},
+    {"Azorius", {true, true, false, false, false}},
+    {"Boros", {true, false, false, true, false}},
+    {"Dimir", {false, true, true, false, false}},
+    {"Golgari", {false, false, true, false, true}},
+    {"Gruul", {false, false, false, true, true}},
+    {"Izzet", {false, true, false, true, false}},
+    {"Orzhov", {true, false, true, false, false}},
+    {"Rakdos", {false, false, true, true, false}},
+    {"Selesnya", {true, false, false, false, true}},
+    {"Simic", {false, true, false, false, true}},
+    {"Abzan", {true, false, true, false, true}},
+    {"Bant", {true, true, false, false, true}},
+    {"Esper", {true, true, true, false, false}},
+    {"Grixis", {false, true, true, true, false}},
+    {"Jeskai", {true, true, false, true, false}},
+    {"Jund", {false, false, true, true, true}},
+    {"Mardu", {true, false, true, true, false}},
+    {"Naya", {true, false, false, true, true}},
+    {"Sultai", {false, true, true, false, true}},
+    {"Temur", {false, true, false, true, true}},
+    {"Glint", {false, true, true, true, true}},
+    {"Dune", {true, false, true, true, true}},
+    {"Ink", {true, true, false, true, true}},
+    {"Witch", {true, true, true, false, true}},
+    {"Yore", {true, true, true, true, false}},
+    {"FiveColor", {true, true, true, true, true}}
+};
+
+std::string colorToString(ColorCombination color) {
+    return colorData[color].name;
+};
+ColorCombination stringToColor(std::string colorString) {
     if (colorString == std::string("White")) {
-        return ColorCombination::White;
+        return ColorCombination::WHITE;
     } else if (colorString == std::string("Blue")) {
-        return ColorCombination::Blue;
+        return ColorCombination::BLUE;
     } else if (colorString == std::string("Black")) {
-        return ColorCombination::Black;
+        return ColorCombination::BLACK;
     } else if (colorString == std::string("Red")) {
-        return ColorCombination::Red;
+        return ColorCombination::RED;
     } else if (colorString == std::string("Green")) {
-        return ColorCombination::Green;
+        return ColorCombination::GREEN;
     } else if (colorString == std::string("Colorless")) {
-        return ColorCombination::Colorless;
+        return ColorCombination::COLORLESS;
     } else if (colorString == std::string("Azorius")) {
-        return ColorCombination::Azorius;
+        return ColorCombination::AZORIUS;
     } else if (colorString == std::string("Boros")) {
-        return ColorCombination::Boros;
+        return ColorCombination::BOROS;
     } else if (colorString == std::string("Dimir")) {
-        return ColorCombination::Dimir;
+        return ColorCombination::DIMIR;
     } else if (colorString == std::string("Golgari")) {
-        return ColorCombination::Golgari;
+        return ColorCombination::GOLGARI;
     } else if (colorString == std::string("Gruul")) {
-        return ColorCombination::Gruul;
+        return ColorCombination::GRUUL;
     } else if (colorString == std::string("Izzet")) {
-        return ColorCombination::Izzet;
+        return ColorCombination::IZZET;
     } else if (colorString == std::string("Orzhov")) {
-        return ColorCombination::Orzhov;
+        return ColorCombination::ORZHOV;
     } else if (colorString == std::string("Rakdos")) {
-        return ColorCombination::Rakdos;
+        return ColorCombination::RAKDOS;
     } else if (colorString == std::string("Selesnya")) {
-        return ColorCombination::Selesnya;
+        return ColorCombination::SELESNYA;
     } else if (colorString == std::string("Simic")) {
-        return ColorCombination::Simic;
+        return ColorCombination::SIMIC;
     } else if (colorString == std::string("Abzan")) {
-        return ColorCombination::Abzan;
+        return ColorCombination::ABZAN;
     } else if (colorString == std::string("Bant")) {
-        return ColorCombination::Bant;
+        return ColorCombination::BANT;
     } else if (colorString == std::string("Esper")) {
-        return ColorCombination::Esper;
+        return ColorCombination::ESPER;
     } else if (colorString == std::string("Grixis")) {
-        return ColorCombination::Grixis;
+        return ColorCombination::GRIXIS;
     } else if (colorString == std::string("Jeskai")) {
-        return ColorCombination::Jeskai;
+        return ColorCombination::JESKAI;
     } else if (colorString == std::string("Jund")) {
-        return ColorCombination::Jund;
+        return ColorCombination::JUND;
     } else if (colorString == std::string("Mardu")) {
-        return ColorCombination::Mardu;
+        return ColorCombination::MARDU;
     } else if (colorString == std::string("Naya")) {
-        return ColorCombination::Naya;
+        return ColorCombination::NAYA;
     } else if (colorString == std::string("Sultai")) {
-        return ColorCombination::Sultai;
+        return ColorCombination::SULTAI;
     } else if (colorString == std::string("Temur")) {
-        return ColorCombination::Temur;
+        return ColorCombination::TEMUR;
     } else if (colorString == std::string("Glint")) {
-        return ColorCombination::Glint;
+        return ColorCombination::GLINT;
     } else if (colorString == std::string("Dune")) {
-        return ColorCombination::Dune;
+        return ColorCombination::DUNE;
     } else if (colorString == std::string("Ink")) {
-        return ColorCombination::Ink;
+        return ColorCombination::INK;
     } else if (colorString == std::string("Witch")) {
-        return ColorCombination::Witch;
+        return ColorCombination::WITCH;
     } else if (colorString == std::string("Yore")) {
-        return ColorCombination::Yore;
+        return ColorCombination::YORE;
     } else if (colorString == std::string("FiveColor")) {
-        return ColorCombination::FiveColor;
+        return ColorCombination::FIVECOLOR;
     } else {
         // Invalid color string
-        return ColorCombination::Colorless;
+        return ColorCombination::COLORLESS;
     }
 };
 
 constexpr bool hasWhite(ColorCombination color) {
-    switch(color) {
-        case White:
-            return true;
-        case Blue:
-            return false;
-        case Black:
-            return false;
-        case Red:
-            return false;
-        case Green:
-            return false;
-        case Colorless:
-            return false;
-        
-        case Azorius: //White/Blue
-            return true;
-        case Boros: //Red/White
-            return true;
-        case Dimir: //Blue/Black
-            return false;
-        case Golgari: //Black/Green
-            return false;
-        case Gruul: //Red/Green
-            return false;
-        case Izzet: //Blue/Red
-            return false;
-        case Orzhov: //White/Black
-            return true;
-        case Rakdos: //Black/Red
-            return false;
-        case Selesnya: //White/Green
-            return true;
-        case Simic: //Blue/Green
-            return false;
-        
-        case Abzan: //White/Black/Green
-            return true;
-        case Bant: //White/Blue/Green
-            return true;
-        case Esper: //White/Blue/Black
-            return true;
-        case Grixis: //Blue/Black/Red
-            return false;
-        case Jeskai: //White/Blue/Red
-            return true;
-        case Jund: //Black/Red/Green
-            return false;
-        case Mardu: //White/Black/Red
-            return true;
-        case Naya: //White/Red/Green
-            return true;
-        case Sultai: //Blue/Black/Green
-            return false;
-        case Temur: //Blue/Red/Green
-            return false;
-        
-        case Glint: //No White
-            return false;
-        case Dune: //No Blue
-            return true;
-        case Ink: //No Black
-            return true;
-        case Witch: //No Red
-            return true;
-        case Yore: //No Green
-            return true;
-        
-        case FiveColor: //All Colors
-            return true;
-        default:
-            return false;
-    };
+    return colorData[color].colors[WHITE];
 }
 constexpr bool hasBlue(ColorCombination color) {
-    switch(color) {
-        case White:
-            return false;
-        case Blue:
-            return true;
-        case Black:
-            return false;
-        case Red:
-            return false;
-        case Green:
-            return false;
-        case Colorless:
-            return false;
-        
-        case Azorius: //White/Blue
-            return true;
-        case Boros: //Red/White
-            return false;
-        case Dimir: //Blue/Black
-            return true;
-        case Golgari: //Black/Green
-            return false;
-        case Gruul: //Red/Green
-            return false;
-        case Izzet: //Blue/Red
-            return true;
-        case Orzhov: //White/Black
-            return false;
-        case Rakdos: //Black/Red
-            return false;
-        case Selesnya: //White/Green
-            return false;
-        case Simic: //Blue/Green
-            return true;
-        
-        case Abzan: //White/Black/Green
-            return false;
-        case Bant: //White/Blue/Green
-            return false;
-        case Esper: //White/Blue/Black
-            return true;
-        case Grixis: //Blue/Black/Red
-            return true;
-        case Jeskai: //White/Blue/Red
-            return true;
-        case Jund: //Black/Red/Green
-            return false;
-        case Mardu: //White/Black/Red
-            return false;
-        case Naya: //White/Red/Green
-            return false;
-        case Sultai: //Blue/Black/Green
-            return true;
-        case Temur: //Blue/Red/Green
-            return true;
-        
-        case Glint: //No White
-            return true;
-        case Dune: //No Blue
-            return false;
-        case Ink: //No Black
-            return true;
-        case Witch: //No Red
-            return true;
-        case Yore: //No Green
-            return true;
-        
-        case FiveColor: //All Colors
-            return true;
-        default:
-            return false;
-    };
+    return colorData[color].colors[BLUE];
 }
 constexpr bool hasBlack(ColorCombination color)  {
-    switch(color) {
-        case White:
-            return false;
-        case Blue:
-            return false;
-        case Black:
-            return true;
-        case Red:
-            return false;
-        case Green:
-            return false;
-        case Colorless:
-            return false;
-        
-        case Azorius: //White/Blue
-            return false;
-        case Boros: //Red/White
-            return false;
-        case Dimir: //Blue/Black
-            return true;
-        case Golgari: //Black/Green
-            return true;
-        case Gruul: //Red/Green
-            return false;
-        case Izzet: //Blue/Red
-            return false;
-        case Orzhov: //White/Black
-            return true;
-        case Rakdos: //Black/Red
-            return true;
-        case Selesnya: //White/Green
-            return false;
-        case Simic: //Blue/Green
-            return false;
-        
-        case Abzan: //White/Black/Green
-            return true;
-        case Bant: //White/Blue/Green
-            return false;
-        case Esper: //White/Blue/Black
-            return true;
-        case Grixis: //Blue/Black/Red
-            return true;
-        case Jeskai: //White/Blue/Red
-            return false;
-        case Jund: //Black/Red/Green
-            return true;
-        case Mardu: //White/Black/Red
-            return true;
-        case Naya: //White/Red/Green
-            return false;
-        case Sultai: //Blue/Black/Green
-            return true;
-        case Temur: //Blue/Red/Green
-            return false;
-        
-        case Glint: //No White
-            return true;
-        case Dune: //No Blue
-            return true;
-        case Ink: //No Black
-            return false;
-        case Witch: //No Red
-            return true;
-        case Yore: //No Green
-            return true;
-        
-        case FiveColor: //All Colors
-            return true;
-        default:
-            return false;
-    };
+    return colorData[color].colors[BLACK];
 }
 constexpr bool hasRed(ColorCombination color) {
-    switch(color) {
-        case White:
-            return false;
-        case Blue:
-            return false;
-        case Black:
-            return false;
-        case Red:
-            return true;
-        case Green:
-            return false;
-        case Colorless:
-            return false;
-        
-        case Azorius: //White/Blue
-            return false;
-        case Boros: //Red/White
-            return true;
-        case Dimir: //Blue/Black
-            return false;
-        case Golgari: //Black/Green
-            return false;
-        case Gruul: //Red/Green
-            return true;
-        case Izzet: //Blue/Red
-            return true;
-        case Orzhov: //White/Black
-            return false;
-        case Rakdos: //Black/Red
-            return true;
-        case Selesnya: //White/Green
-            return false;
-        case Simic: //Blue/Green
-            return false;
-        
-        case Abzan: //White/Black/Green
-            return false;
-        case Bant: //White/Blue/Green
-            return false;
-        case Esper: //White/Blue/Black
-            return false;
-        case Grixis: //Blue/Black/Red
-            return true;
-        case Jeskai: //White/Blue/Red
-            return true;
-        case Jund: //Black/Red/Green
-            return false;
-        case Mardu: //White/Black/Red
-            return true;
-        case Naya: //White/Red/Green
-            return true;
-        case Sultai: //Blue/Black/Green
-            return false;
-        case Temur: //Blue/Red/Green
-            return true;
-        
-        case Glint: //No White
-            return true;
-        case Dune: //No Blue
-            return true;
-        case Ink: //No Black
-            return true;
-        case Witch: //No Red
-            return false;
-        case Yore: //No Green
-            return true;
-        
-        case FiveColor: //All Colors
-            return true;
-        default:
-            return false;
-    };
+    return colorData[color].colors[RED];
 }
 constexpr bool hasGreen(ColorCombination color) {
-    switch(color) {
-        case White:
-            return false;
-        case Blue:
-            return false;
-        case Black:
-            return false;
-        case Red:
-            return false;
-        case Green:
-            return true;
-        case Colorless:
-            return false;
-        
-        case Azorius: //White/Blue
-            return false;
-        case Boros: //Red/White
-            return false;
-        case Dimir: //Blue/Black
-            return false;
-        case Golgari: //Black/Green
-            return true;
-        case Gruul: //Red/Green
-            return true;
-        case Izzet: //Blue/Red
-            return false;
-        case Orzhov: //White/Black
-            return false;
-        case Rakdos: //Black/Red
-            return false;
-        case Selesnya: //White/Green
-            return true;
-        case Simic: //Blue/Green
-            return true;
-        
-        case Abzan: //White/Black/Green
-            return true;
-        case Bant: //White/Blue/Green
-            return true;
-        case Esper: //White/Blue/Black
-            return false;
-        case Grixis: //Blue/Black/Red
-            return false;
-        case Jeskai: //White/Blue/Red
-            return false;
-        case Jund: //Black/Red/Green
-            return true;
-        case Mardu: //White/Black/Red
-            return false;
-        case Naya: //White/Red/Green
-            return true;
-        case Sultai: //Blue/Black/Green
-            return true;
-        case Temur: //Blue/Red/Green
-            return true;
-        
-        case Glint: //No White
-            return true;
-        case Dune: //No Blue
-            return true;
-        case Ink: //No Black
-            return true;
-        case Witch: //No Red
-            return true;
-        case Yore: //No Green
-            return false;
-        
-        case FiveColor: //All Colors
-            return true;
-        default:
-            return false;
-    };
+    return colorData[color].colors[GREEN];
 }
 
-std::bitset<5> getColors(ColorCombination color) {
-    std::bitset<5> colors;
-    colors.set(0, hasWhite(color));
-    colors.set(1, hasBlue(color));
-    colors.set(2, hasBlack(color));
-    colors.set(3, hasRed(color));
-    colors.set(4, hasGreen(color));
-    return colors;
+constexpr bool singleContains(bool color, bool contains) {
+    return (color || !(color || contains));
+}
+
+bool contains(ColorCombination color, ColorCombination contains) {
+    return singleContains(hasWhite(color), hasWhite(contains)) &&
+           singleContains(hasBlue(color), hasBlue(contains)) &&
+           singleContains(hasBlack(color), hasBlack(contains)) &&
+           singleContains(hasRed(color), hasRed(contains)) &&
+           singleContains(hasGreen(color), hasGreen(contains));
 }
