@@ -30,10 +30,28 @@ enum ManaSourceSignature {
     OdysseyFilter,
     Dual,
     TriCycle,
-    Tri
+    Tri,
+    Talisman,
+    Signet,
+    Medallion,
+    Cluestone,
+    Diamond,
+    Keyrune,
+    Locket,
+    Obelisk,
+    Banner,
+    Crystal,
+    Monument,
+    Borderpost,
+    Totem,
+    Cameo,
+    Ramos,
+    AmonkhetMonument,
+    TriSacFetch,
+    DesertPing
 };
 
-static std::unordered_map<std::string, ManaSourceSignature> const string_to_land = {
+static std::unordered_map<std::string, ManaSourceSignature> const string_to_ms = {
     {"Basic", ManaSourceSignature::Basic},
     {"Surveil", ManaSourceSignature::Surveil},
     {"Gain", ManaSourceSignature::Gain},
@@ -57,7 +75,22 @@ static std::unordered_map<std::string, ManaSourceSignature> const string_to_land
     {"OdysseyFilter", ManaSourceSignature::OdysseyFilter},
     {"Dual", ManaSourceSignature::Dual},
     {"TriCycle", ManaSourceSignature::TriCycle},
-    {"Tri", ManaSourceSignature::Tri}
+    {"Tri", ManaSourceSignature::Tri},
+    {"Talisman", ManaSourceSignature::Talisman},
+    {"Signet", ManaSourceSignature::Signet},
+    {"Medallion", ManaSourceSignature::Medallion},
+    {"Cluestone", ManaSourceSignature::Cluestone},
+    {"Diamond", ManaSourceSignature::Diamond},
+    {"Keyrune", ManaSourceSignature::Keyrune},
+    {"Locket", ManaSourceSignature::Locket},
+    {"Obelisk", ManaSourceSignature::Obelisk},
+    {"Banner", ManaSourceSignature::Banner},
+    {"Crystal", ManaSourceSignature::Crystal},
+    {"Monument", ManaSourceSignature::Monument},
+    {"Borderpost", ManaSourceSignature::Borderpost},
+    {"Totem", ManaSourceSignature::Totem},
+    {"Cameo", ManaSourceSignature::Cameo},
+    {"Ramos", ManaSourceSignature::Ramos}
 };
 
 ManaSourceSignature getManaSourceSignature(std::string name);

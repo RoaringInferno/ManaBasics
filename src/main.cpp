@@ -27,7 +27,9 @@ int main(int argc, char** argv) {
         bool is_dual_land = false;
         bool run = true;
         std::cout << "Land Cycle Name (q to quit): ";
-        std::cout << "\n- Surveil\n- Gain\n- Fast\n- Pain\n- FetchableTapped\n- Slow\n- Reveal\n- KaldheimSnow\n- Pathway\n- Scry\n- Shock\n- Guildgate\n- Check\n- Generic\n- Fetch\n- Artifact\n- Filter\n- Bounce\n- Battlebond\n- OdysseyFilter\n- Dual\n- TriCycle\n- Tri\n";
+        for (const auto& pair : string_to_ms) {
+            std::cout << "\n- " << pair.first;
+        }
         std::cin >> input;
         if (input == "q") { break; }
         sources.insert(getManaSourceSignature(input));

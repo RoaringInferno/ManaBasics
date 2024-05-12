@@ -15,6 +15,7 @@ const Land lands[] = {
     {"Jungle Hollow", ColorCombination::GOLGARI, ManaSourceSignature::Gain},
     {"Wind-Scarred Crag", ColorCombination::BOROS, ManaSourceSignature::Gain},
     {"Thornwood Falls", ColorCombination::SIMIC, ManaSourceSignature::Gain},
+
     {"Seachrome Coast", ColorCombination::AZORIUS, ManaSourceSignature::Fast},
     {"Darkslick Shores", ColorCombination::DIMIR, ManaSourceSignature::Fast},
     {"Blackcleave Cliffs", ColorCombination::RAKDOS, ManaSourceSignature::Fast},
@@ -25,6 +26,7 @@ const Land lands[] = {
     {"Blooming Marsh", ColorCombination::GOLGARI, ManaSourceSignature::Fast},
     {"Inspiring Vantage", ColorCombination::BOROS, ManaSourceSignature::Fast},
     {"Botanical Sanctum", ColorCombination::SIMIC, ManaSourceSignature::Fast},
+
     {"Adarkar Wastes", ColorCombination::AZORIUS, ManaSourceSignature::Pain},
     {"Underground River", ColorCombination::DIMIR, ManaSourceSignature::Pain},
     {"Sulfurous Springs", ColorCombination::RAKDOS, ManaSourceSignature::Pain},
@@ -35,6 +37,7 @@ const Land lands[] = {
     {"Llanowar Wastes", ColorCombination::GOLGARI, ManaSourceSignature::Pain},
     {"Battlefield Forge", ColorCombination::BOROS, ManaSourceSignature::Pain},
     {"Yavimaya Coast", ColorCombination::SIMIC, ManaSourceSignature::Pain},
+
     {"Idyllic Beachfront", ColorCombination::AZORIUS, ManaSourceSignature::FetchableTapped},
     {"Contaminated Aquifer", ColorCombination::DIMIR, ManaSourceSignature::FetchableTapped},
     {"Geothermal Bog", ColorCombination::RAKDOS, ManaSourceSignature::FetchableTapped},
@@ -45,6 +48,7 @@ const Land lands[] = {
     {"Haunted Mire", ColorCombination::GOLGARI, ManaSourceSignature::FetchableTapped},
     {"Sacred Peaks", ColorCombination::BOROS, ManaSourceSignature::FetchableTapped},
     {"Tangled Islet", ColorCombination::SIMIC, ManaSourceSignature::FetchableTapped},
+
     {"Deserted Beach", ColorCombination::AZORIUS, ManaSourceSignature::Slow},
     {"Shipwreck Marsh", ColorCombination::DIMIR, ManaSourceSignature::Slow},
     {"Haunted Ridge", ColorCombination::RAKDOS, ManaSourceSignature::Slow},
@@ -55,11 +59,13 @@ const Land lands[] = {
     {"Deathcap Glade", ColorCombination::GOLGARI, ManaSourceSignature::Slow},
     {"Sundown Pass", ColorCombination::BOROS, ManaSourceSignature::Slow},
     {"Dreamroot Cascade", ColorCombination::SIMIC, ManaSourceSignature::Slow},
+
     {"Shineshadow Snarl", ColorCombination::ORZHOV, ManaSourceSignature::Reveal},
     {"Frostboil Snarl", ColorCombination::IZZET, ManaSourceSignature::Reveal},
     {"Necroblossom Snarl", ColorCombination::GOLGARI, ManaSourceSignature::Reveal},
     {"Furycalm Snarl", ColorCombination::BOROS, ManaSourceSignature::Reveal},
     {"Vineglimmer Snarl", ColorCombination::SIMIC, ManaSourceSignature::Reveal},
+
     {"Glacial Floodplain", ColorCombination::AZORIUS, ManaSourceSignature::KaldheimSnow},
     {"Ice Tunnel", ColorCombination::DIMIR, ManaSourceSignature::KaldheimSnow},
     {"Sulfurous Mire", ColorCombination::RAKDOS, ManaSourceSignature::KaldheimSnow},
@@ -70,6 +76,7 @@ const Land lands[] = {
     {"Woodland Chasm", ColorCombination::GOLGARI, ManaSourceSignature::KaldheimSnow},
     {"Alpine Meadow", ColorCombination::BOROS, ManaSourceSignature::KaldheimSnow},
     {"Rimewood Falls", ColorCombination::SIMIC, ManaSourceSignature::KaldheimSnow},
+
     {"Hengegate Pathway // Mistgate Pathway", ColorCombination::AZORIUS, ManaSourceSignature::Pathway},
     {"Clearwater Pathway // Murkwater Pathway", ColorCombination::DIMIR, ManaSourceSignature::Pathway},
     {"Blightstep Pathway // Searstep Pathway", ColorCombination::RAKDOS, ManaSourceSignature::Pathway},
@@ -80,6 +87,7 @@ const Land lands[] = {
     {"Darkbore Pathway // Slitherbore Pathway", ColorCombination::GOLGARI, ManaSourceSignature::Pathway},
     {"Needleverge Pathway // Pillarverge Pathway", ColorCombination::BOROS, ManaSourceSignature::Pathway},
     {"Barkchannel Pathway // Tidechannel Pathway", ColorCombination::SIMIC, ManaSourceSignature::Pathway},
+
     {"Temple of Enlightenment", ColorCombination::AZORIUS, ManaSourceSignature::Scry},
     {"Temple of Deceit", ColorCombination::DIMIR, ManaSourceSignature::Scry},
     {"Temple of Malice", ColorCombination::RAKDOS, ManaSourceSignature::Scry},
@@ -90,6 +98,7 @@ const Land lands[] = {
     {"Temple of Malady", ColorCombination::GOLGARI, ManaSourceSignature::Scry},
     {"Temple of Triumph", ColorCombination::BOROS, ManaSourceSignature::Scry},
     {"Temple of Mystery", ColorCombination::SIMIC, ManaSourceSignature::Scry},
+
     {"Hallowed Fountain", ColorCombination::AZORIUS, ManaSourceSignature::Shock},
     {"Watery Grave", ColorCombination::DIMIR, ManaSourceSignature::Shock},
     {"Blood Crypt", ColorCombination::RAKDOS, ManaSourceSignature::Shock},
@@ -100,6 +109,7 @@ const Land lands[] = {
     {"Overgrown Tomb", ColorCombination::GOLGARI, ManaSourceSignature::Shock},
     {"Sacred Foundry", ColorCombination::BOROS, ManaSourceSignature::Shock},
     {"Breeding Pool", ColorCombination::SIMIC, ManaSourceSignature::Shock},
+
     {"Azorius Guildgate", ColorCombination::AZORIUS, ManaSourceSignature::Guildgate},
     {"Dimir Guildgate", ColorCombination::DIMIR, ManaSourceSignature::Guildgate},
     {"Rakdos Guildgate", ColorCombination::RAKDOS, ManaSourceSignature::Guildgate},
@@ -110,6 +120,7 @@ const Land lands[] = {
     {"Golgari Guildgate", ColorCombination::GOLGARI, ManaSourceSignature::Guildgate},
     {"Boros Guildgate", ColorCombination::BOROS, ManaSourceSignature::Guildgate},
     {"Simic Guildgate", ColorCombination::SIMIC, ManaSourceSignature::Guildgate},
+
     {"Glacial Fortress", ColorCombination::AZORIUS, ManaSourceSignature::Check},
     {"Drowned Catacomb", ColorCombination::DIMIR, ManaSourceSignature::Check},
     {"Dragonskull Summit", ColorCombination::RAKDOS, ManaSourceSignature::Check},
@@ -120,6 +131,7 @@ const Land lands[] = {
     {"Woodland Cemetery", ColorCombination::GOLGARI, ManaSourceSignature::Check},
     {"Clifftop Retreat", ColorCombination::BOROS, ManaSourceSignature::Check},
     {"Hinterland Harbor", ColorCombination::SIMIC, ManaSourceSignature::Check},
+
     {"Meandering River", ColorCombination::AZORIUS, ManaSourceSignature::Generic},
     {"Submerged Boneyard", ColorCombination::DIMIR, ManaSourceSignature::Generic},
     {"Cinder Barrens", ColorCombination::RAKDOS, ManaSourceSignature::Generic},
@@ -130,6 +142,7 @@ const Land lands[] = {
     {"Foul Orchard", ColorCombination::GOLGARI, ManaSourceSignature::Generic},
     {"Stone Quarry", ColorCombination::BOROS, ManaSourceSignature::Generic},
     {"Woodland Stream", ColorCombination::SIMIC, ManaSourceSignature::Generic},
+
     {"Flooded Strand", ColorCombination::AZORIUS, ManaSourceSignature::Fetch},
     {"Polluted Delta", ColorCombination::DIMIR, ManaSourceSignature::Fetch},
     {"Bloodstained Mire", ColorCombination::RAKDOS, ManaSourceSignature::Fetch},
@@ -140,6 +153,7 @@ const Land lands[] = {
     {"Verdant Catacombs", ColorCombination::GOLGARI, ManaSourceSignature::Fetch},
     {"Arid Mesa", ColorCombination::BOROS, ManaSourceSignature::Fetch},
     {"Misty Rainforest", ColorCombination::SIMIC, ManaSourceSignature::Fetch},
+
     {"Razortide Bridge", ColorCombination::AZORIUS, ManaSourceSignature::Artifact},
     {"Mistvault Bridge", ColorCombination::DIMIR, ManaSourceSignature::Artifact},
     {"Drossforge Bridge", ColorCombination::RAKDOS, ManaSourceSignature::Artifact},
@@ -150,6 +164,7 @@ const Land lands[] = {
     {"Darkmoss Bridge", ColorCombination::GOLGARI, ManaSourceSignature::Artifact},
     {"Rustvale Bridge", ColorCombination::BOROS, ManaSourceSignature::Artifact},
     {"Tanglepool Bridge", ColorCombination::SIMIC, ManaSourceSignature::Artifact},
+
     {"Mystic Gate", ColorCombination::AZORIUS, ManaSourceSignature::Filter},
     {"Sunken Ruins", ColorCombination::DIMIR, ManaSourceSignature::Filter},
     {"Graven Cairns", ColorCombination::RAKDOS, ManaSourceSignature::Filter},
@@ -160,6 +175,7 @@ const Land lands[] = {
     {"Twilight Mire", ColorCombination::GOLGARI, ManaSourceSignature::Filter},
     {"Rugged Prairie", ColorCombination::BOROS, ManaSourceSignature::Filter},
     {"Flooded Grove", ColorCombination::SIMIC, ManaSourceSignature::Filter},
+
     {"Azorius Chancery", ColorCombination::AZORIUS, ManaSourceSignature::Bounce},
     {"Dimir Aqueduct", ColorCombination::DIMIR, ManaSourceSignature::Bounce},
     {"Rakdos Carnarium", ColorCombination::RAKDOS, ManaSourceSignature::Bounce},
@@ -170,6 +186,7 @@ const Land lands[] = {
     {"Golgari Rot Farm", ColorCombination::GOLGARI, ManaSourceSignature::Bounce},
     {"Boros Garrison", ColorCombination::BOROS, ManaSourceSignature::Bounce},
     {"Simic Growth Chamber", ColorCombination::SIMIC, ManaSourceSignature::Bounce},
+
     {"Sea of Clouds", ColorCombination::AZORIUS, ManaSourceSignature::Battlebond},
     {"Morphic Pool", ColorCombination::DIMIR, ManaSourceSignature::Battlebond},
     {"Luxury Suite", ColorCombination::RAKDOS, ManaSourceSignature::Battlebond},
@@ -180,6 +197,7 @@ const Land lands[] = {
     {"Undergrowth Stadium", ColorCombination::GOLGARI, ManaSourceSignature::Battlebond},
     {"Spectator Seating", ColorCombination::BOROS, ManaSourceSignature::Battlebond},
     {"Rejuvenating Springs", ColorCombination::SIMIC, ManaSourceSignature::Battlebond},
+
     {"Skycloud Expanse", ColorCombination::AZORIUS, ManaSourceSignature::OdysseyFilter},
     {"Darkwater Catacombs", ColorCombination::DIMIR, ManaSourceSignature::OdysseyFilter},
     {"Shadowblood Ridge", ColorCombination::RAKDOS, ManaSourceSignature::OdysseyFilter},
@@ -190,6 +208,7 @@ const Land lands[] = {
     {"Viridescent Bog", ColorCombination::GOLGARI, ManaSourceSignature::OdysseyFilter},
     {"Sunscorched Divide", ColorCombination::BOROS, ManaSourceSignature::OdysseyFilter},
     {"Overflowing Basin", ColorCombination::SIMIC, ManaSourceSignature::OdysseyFilter},
+
     {"Tundra", ColorCombination::AZORIUS, ManaSourceSignature::Dual},
     {"Underground Sea", ColorCombination::DIMIR, ManaSourceSignature::Dual},
     {"Badlands", ColorCombination::RAKDOS, ManaSourceSignature::Dual},
@@ -200,29 +219,181 @@ const Land lands[] = {
     {"Bayou", ColorCombination::GOLGARI, ManaSourceSignature::Dual},
     {"Plateau", ColorCombination::BOROS, ManaSourceSignature::Dual},
     {"Tropical Island", ColorCombination::SIMIC, ManaSourceSignature::Dual},
+
     {"Plains", ColorCombination::WHITE, ManaSourceSignature::Basic},
     {"Island", ColorCombination::BLUE, ManaSourceSignature::Basic},
     {"Swamp", ColorCombination::BLACK, ManaSourceSignature::Basic},
     {"Mountain", ColorCombination::RED, ManaSourceSignature::Basic},
     {"Forest", ColorCombination::GREEN, ManaSourceSignature::Basic},
-    {"Indatha Triome", ColorCombination::ABZAN, ManaSourceSignature::TriCycle}, //White/Black/Green
-    {"Spara's Headquarters", ColorCombination::BANT, ManaSourceSignature::TriCycle}, //White/Blue/Green
-    {"Raffine's Tower", ColorCombination::ESPER, ManaSourceSignature::TriCycle}, //White/Blue/Black
-    {"Xander's Lounge", ColorCombination::GRIXIS, ManaSourceSignature::TriCycle}, //Blue/Black/Red
-    {"Savai Triome", ColorCombination::JESKAI, ManaSourceSignature::TriCycle}, //White/Blue/Red
-    {"Ziatora's Proving Ground", ColorCombination::JUND, ManaSourceSignature::TriCycle}, //Black/Red/Green
-    {"Raugrin Triome", ColorCombination::MARDU, ManaSourceSignature::TriCycle}, //White/Black/Red
-    {"Jetmir's Garden", ColorCombination::NAYA, ManaSourceSignature::TriCycle}, //White/Red/Green
-    {"Zagoth Triome", ColorCombination::SULTAI, ManaSourceSignature::TriCycle}, //Blue/Black/Green
-    {"Ketria Triome", ColorCombination::TEMUR, ManaSourceSignature::TriCycle}, //Blue/Red/Green
-    {"Seaside Citadel", ColorCombination::BANT, ManaSourceSignature::Tri}, //White/Blue/Green
-    {"Arcane Sanctum", ColorCombination::ESPER, ManaSourceSignature::Tri}, //White/Blue/Black
-    {"Crumbling Necropolis", ColorCombination::GRIXIS, ManaSourceSignature::Tri}, //Blue/Black/Red
-    {"Savage Lands", ColorCombination::JUND, ManaSourceSignature::Tri}, //Black/Red/Green
-    {"Jungle Shrine", ColorCombination::NAYA, ManaSourceSignature::Tri}, //White/Red/Green
-    {"Nomad Outpost", ColorCombination::MARDU, ManaSourceSignature::Tri}, //White/Black/Red
-    {"Sandsteppe Citadel", ColorCombination::ABZAN, ManaSourceSignature::Tri}, //White/Black/Green
-    {"Opulent Palace", ColorCombination::SULTAI, ManaSourceSignature::Tri}, //Blue/Black/Green
-    {"Frontier Bivouac", ColorCombination::TEMUR, ManaSourceSignature::Tri}, //Blue/Red/Green
-    {"Mystic Monastery", ColorCombination::JESKAI, ManaSourceSignature::Tri}, //White/Blue/Red
+
+    {"Spara's Headquarters", ColorCombination::BANT, ManaSourceSignature::TriCycle},
+    {"Raffine's Tower", ColorCombination::ESPER, ManaSourceSignature::TriCycle},
+    {"Xander's Lounge", ColorCombination::GRIXIS, ManaSourceSignature::TriCycle},
+    {"Jetmir's Garden", ColorCombination::NAYA, ManaSourceSignature::TriCycle},
+    {"Ziatora's Proving Ground", ColorCombination::JUND, ManaSourceSignature::TriCycle},
+    {"Indatha Triome", ColorCombination::ABZAN, ManaSourceSignature::TriCycle},
+    {"Savai Triome", ColorCombination::JESKAI, ManaSourceSignature::TriCycle},
+    {"Raugrin Triome", ColorCombination::MARDU, ManaSourceSignature::TriCycle},
+    {"Zagoth Triome", ColorCombination::SULTAI, ManaSourceSignature::TriCycle},
+    {"Ketria Triome", ColorCombination::TEMUR, ManaSourceSignature::TriCycle},
+
+    {"Seaside Citadel", ColorCombination::BANT, ManaSourceSignature::Tri},
+    {"Arcane Sanctum", ColorCombination::ESPER, ManaSourceSignature::Tri},
+    {"Crumbling Necropolis", ColorCombination::GRIXIS, ManaSourceSignature::Tri},
+    {"Savage Lands", ColorCombination::JUND, ManaSourceSignature::Tri},
+    {"Jungle Shrine", ColorCombination::NAYA, ManaSourceSignature::Tri},
+    {"Nomad Outpost", ColorCombination::MARDU, ManaSourceSignature::Tri},
+    {"Sandsteppe Citadel", ColorCombination::ABZAN, ManaSourceSignature::Tri},
+    {"Opulent Palace", ColorCombination::SULTAI, ManaSourceSignature::Tri},
+    {"Frontier Bivouac", ColorCombination::TEMUR, ManaSourceSignature::Tri},
+    {"Mystic Monastery", ColorCombination::JESKAI, ManaSourceSignature::Tri},
+
+    {"Talisman of Conviction", ColorCombination::BOROS, ManaSourceSignature::Talisman},
+    {"Talisman of Creativity", ColorCombination::IZZET, ManaSourceSignature::Talisman},
+    {"Talisman of Curiosity", ColorCombination::SIMIC, ManaSourceSignature::Talisman},
+    {"Talisman of Dominance", ColorCombination::DIMIR, ManaSourceSignature::Talisman},
+    {"Talisman of Hierarchy", ColorCombination::ORZHOV, ManaSourceSignature::Talisman},
+    {"Talisman of Impulse", ColorCombination::GRUUL, ManaSourceSignature::Talisman},
+    {"Talisman of Indulgence", ColorCombination::RAKDOS, ManaSourceSignature::Talisman},
+    {"Talisman of Progress", ColorCombination::AZORIUS, ManaSourceSignature::Talisman},
+    {"Talisman of Resillience", ColorCombination::GOLGARI, ManaSourceSignature::Talisman},
+    {"Talisman of Unity", ColorCombination::SELESNYA, ManaSourceSignature::Talisman},
+
+    {"Azorius Signet", ColorCombination::AZORIUS, ManaSourceSignature::Signet},
+    {"Boros Signet", ColorCombination::BOROS, ManaSourceSignature::Signet},
+    {"Dimir Signet", ColorCombination::DIMIR, ManaSourceSignature::Signet},
+    {"Golgari Signet", ColorCombination::GOLGARI, ManaSourceSignature::Signet},
+    {"Gruul Signet", ColorCombination::GRUUL, ManaSourceSignature::Signet},
+    {"Izzet Signet", ColorCombination::IZZET, ManaSourceSignature::Signet},
+    {"Orzhov Signet", ColorCombination::ORZHOV, ManaSourceSignature::Signet},
+    {"Rakdos Signet", ColorCombination::RAKDOS, ManaSourceSignature::Signet},
+    {"Selesnya Signet", ColorCombination::SELESNYA, ManaSourceSignature::Signet},
+    {"Simic Signet", ColorCombination::SIMIC, ManaSourceSignature::Signet},
+
+    {"Pearl Medallion", ColorCombination::WHITE, ManaSourceSignature::Medallion},
+    {"Jet Medallion", ColorCombination::BLACK, ManaSourceSignature::Medallion},
+    {"Sapphire Medallion", ColorCombination::BLUE, ManaSourceSignature::Medallion},
+    {"Ruby Medallion", ColorCombination::RED, ManaSourceSignature::Medallion},
+    {"Emerald Medallion", ColorCombination::GREEN, ManaSourceSignature::Medallion},
+
+    {"Azorius Cluestone", ColorCombination::AZORIUS, ManaSourceSignature::Cluestone},
+    {"Boros Cluestone", ColorCombination::BOROS, ManaSourceSignature::Cluestone},
+    {"Dimir Cluestone", ColorCombination::DIMIR, ManaSourceSignature::Cluestone},
+    {"Golgari Cluestone", ColorCombination::GOLGARI, ManaSourceSignature::Cluestone},
+    {"Gruul Cluestone", ColorCombination::GRUUL, ManaSourceSignature::Cluestone},
+    {"Izzet Cluestone", ColorCombination::IZZET, ManaSourceSignature::Cluestone},
+    {"Orzhov Cluestone", ColorCombination::ORZHOV, ManaSourceSignature::Cluestone},
+    {"Rakdos Cluestone", ColorCombination::RAKDOS, ManaSourceSignature::Cluestone},
+    {"Selesnya Cluestone", ColorCombination::SELESNYA, ManaSourceSignature::Cluestone},
+    {"Simic Cluestone", ColorCombination::SIMIC, ManaSourceSignature::Cluestone},
+
+    {"Marble Diamond", ColorCombination::WHITE, ManaSourceSignature::Diamond},
+    {"Charcoal Diamond", ColorCombination::BLACK, ManaSourceSignature::Diamond},
+    {"Sky Diamond", ColorCombination::BLUE, ManaSourceSignature::Diamond},
+    {"Fire Diamond", ColorCombination::RED, ManaSourceSignature::Diamond},
+    {"Moss Diamond", ColorCombination::GREEN, ManaSourceSignature::Diamond},
+
+    {"Azorius Keyrune", ColorCombination::AZORIUS, ManaSourceSignature::Keyrune},
+    {"Boros Keyrune", ColorCombination::BOROS, ManaSourceSignature::Keyrune},
+    {"Dimir Keyrune", ColorCombination::DIMIR, ManaSourceSignature::Keyrune},
+    {"Golgari Keyrune", ColorCombination::GOLGARI, ManaSourceSignature::Keyrune},
+    {"Gruul Keyrune", ColorCombination::GRUUL, ManaSourceSignature::Keyrune},
+    {"Izzet Keyrune", ColorCombination::IZZET, ManaSourceSignature::Keyrune},
+    {"Orzhov Keyrune", ColorCombination::ORZHOV, ManaSourceSignature::Keyrune},
+    {"Rakdos Keyrune", ColorCombination::RAKDOS, ManaSourceSignature::Keyrune},
+    {"Selesnya Keyrune", ColorCombination::SELESNYA, ManaSourceSignature::Keyrune},
+    {"Simic Keyrune", ColorCombination::SIMIC, ManaSourceSignature::Keyrune},
+
+    {"Azorius Locket", ColorCombination::AZORIUS, ManaSourceSignature::Locket},
+    {"Boros Locket", ColorCombination::BOROS, ManaSourceSignature::Locket},
+    {"Dimir Locket", ColorCombination::DIMIR, ManaSourceSignature::Locket},
+    {"Golgari Locket", ColorCombination::GOLGARI, ManaSourceSignature::Locket},
+    {"Gruul Locket", ColorCombination::GRUUL, ManaSourceSignature::Locket},
+    {"Izzet Locket", ColorCombination::IZZET, ManaSourceSignature::Locket},
+    {"Orzhov Locket", ColorCombination::ORZHOV, ManaSourceSignature::Locket},
+    {"Rakdos Locket", ColorCombination::RAKDOS, ManaSourceSignature::Locket},
+    {"Selesnya Locket", ColorCombination::SELESNYA, ManaSourceSignature::Locket},
+    {"Simic Locket", ColorCombination::SIMIC, ManaSourceSignature::Locket},
+
+    {"Obelisk of Bant", ColorCombination::BANT, ManaSourceSignature::Obelisk},
+    {"Obelisk of Esper", ColorCombination::ESPER, ManaSourceSignature::Obelisk},
+    {"Obelisk of Grixis", ColorCombination::GRIXIS, ManaSourceSignature::Obelisk},
+    {"Obelisk of Jund", ColorCombination::JUND, ManaSourceSignature::Obelisk},
+    {"Obelisk of Naya", ColorCombination::NAYA, ManaSourceSignature::Obelisk},
+
+    {"Mardu Banner", ColorCombination::MARDU, ManaSourceSignature::Banner},
+    {"Temur Banner", ColorCombination::TEMUR, ManaSourceSignature::Banner},
+    {"Abzan Banner", ColorCombination::ABZAN, ManaSourceSignature::Banner},
+    {"Jeskai Banner", ColorCombination::JESKAI, ManaSourceSignature::Banner},
+    {"Sultai Banner", ColorCombination::SULTAI, ManaSourceSignature::Banner},
+
+    {"Indatha Crystal", ColorCombination::ABZAN, ManaSourceSignature::Crystal},
+    {"Savai Crystal", ColorCombination::JESKAI, ManaSourceSignature::Crystal},
+    {"Raugrin Crystal", ColorCombination::MARDU, ManaSourceSignature::Crystal},
+    {"Zagoth Crystal", ColorCombination::SULTAI, ManaSourceSignature::Crystal},
+    {"Ketria Crystal", ColorCombination::TEMUR, ManaSourceSignature::Crystal},
+
+    {"Ojutai Monument", ColorCombination::AZORIUS, ManaSourceSignature::Monument},
+    {"Silumgar Monument", ColorCombination::DIMIR, ManaSourceSignature::Monument},
+    {"Kolaghan Monument", ColorCombination::RAKDOS, ManaSourceSignature::Monument},
+    {"Atarka Monument", ColorCombination::GRUUL, ManaSourceSignature::Monument},
+    {"Dromoka Monument", ColorCombination::SELESNYA, ManaSourceSignature::Monument},
+
+    {"Fieldmist Borderpost", ColorCombination::AZORIUS, ManaSourceSignature::Borderpost},
+    {"Mistvein Borderpost", ColorCombination::DIMIR, ManaSourceSignature::Borderpost},
+    {"Veinfire Borderpost", ColorCombination::RAKDOS, ManaSourceSignature::Borderpost},
+    {"Firewild Borderpost", ColorCombination::GRUUL, ManaSourceSignature::Borderpost},
+    {"Wildfield Borderpost", ColorCombination::SELESNYA, ManaSourceSignature::Borderpost},
+
+    {"Thunder Totem", ColorCombination::WHITE, ManaSourceSignature::Totem},
+    {"Chronatog Totem", ColorCombination::BLUE, ManaSourceSignature::Totem},
+    {"Phyrexian Totem", ColorCombination::BLACK, ManaSourceSignature::Totem},
+    {"Foriysian Totem", ColorCombination::RED, ManaSourceSignature::Totem},
+    {"Weatherseed Totem", ColorCombination::GREEN, ManaSourceSignature::Totem},
+
+    {"Seashell Cameo", ColorCombination::AZORIUS, ManaSourceSignature::Cameo},
+    {"Drake-Skull Cameo", ColorCombination::DIMIR, ManaSourceSignature::Cameo},
+    {"Bloodstone Cameo", ColorCombination::RAKDOS, ManaSourceSignature::Cameo},
+    {"Troll-Horn Cameo", ColorCombination::GRUUL, ManaSourceSignature::Cameo},
+    {"Tigereye Cameo", ColorCombination::SELESNYA, ManaSourceSignature::Cameo},
+
+    {"Tooth of Ramos", ColorCombination::WHITE, ManaSourceSignature::Ramos},
+    {"Eye of Ramos", ColorCombination::BLUE, ManaSourceSignature::Ramos},
+    {"Skull of Ramos", ColorCombination::BLACK, ManaSourceSignature::Ramos},
+    {"Heart of Ramos", ColorCombination::RED, ManaSourceSignature::Ramos},
+    {"Horn of Ramos", ColorCombination::GREEN, ManaSourceSignature::Ramos},
+
+    {"Oketra's Monument", ColorCombination::WHITE, ManaSourceSignature::AmonkhetMonument},
+    {"Kefnet's Monument", ColorCombination::BLUE, ManaSourceSignature::AmonkhetMonument},
+    {"Bontu's Monument", ColorCombination::BLACK, ManaSourceSignature::AmonkhetMonument},
+    {"Hazoret's Monument", ColorCombination::RED, ManaSourceSignature::AmonkhetMonument},
+    {"Rhona's Monument", ColorCombination::GREEN, ManaSourceSignature::AmonkhetMonument},
+
+    {"Brokers Hideout", ColorCombination::BANT, ManaSourceSignature::TriSacFetch},
+    {"Obscura Storefront", ColorCombination::ESPER, ManaSourceSignature::TriSacFetch},
+    {"Maestros Theater", ColorCombination::JESKAI, ManaSourceSignature::TriSacFetch},
+    {"Riveteers Outlook", ColorCombination::JUND, ManaSourceSignature::TriSacFetch},
+    {"Cabaretti Courtyard", ColorCombination::NAYA, ManaSourceSignature::TriSacFetch},
+
+    {"Lonely Arroyo", ColorCombination::AZORIUS, ManaSourceSignature::DesertPing},
+    {"Scoured Springs", ColorCombination::DIMIR, ManaSourceSignature::DesertPing},
+    {"Jagged Barrens", ColorCombination::RAKDOS, ManaSourceSignature::DesertPing},
+    {"Bristling Backwoods", ColorCombination::GRUUL, ManaSourceSignature::DesertPing},
+    {"Creosote Heath", ColorCombination::SELESNYA, ManaSourceSignature::DesertPing},
+    {"Forlorn Flats", ColorCombination::ORZHOV, ManaSourceSignature::DesertPing},
+    {"Festering Gulch", ColorCombination::GOLGARI, ManaSourceSignature::DesertPing},
+    {"Lush Oasis", ColorCombination::SIMIC, ManaSourceSignature::DesertPing},
+    {"Eroded Canyon", ColorCombination::IZZET, ManaSourceSignature::DesertPing},
+    {"Abraded Bluffs", ColorCombination::BOROS, ManaSourceSignature::DesertPing},
+
+    {"Meticulous Archive", ColorCombination::AZORIUS, ManaSourceSignature::Surveil},
+    {"Undercity Sewers", ColorCombination::DIMIR, ManaSourceSignature::Surveil},
+    {"Raucous Theater", ColorCombination::RAKDOS, ManaSourceSignature::Surveil},
+    {"Commercial District", ColorCombination::GRUUL, ManaSourceSignature::Surveil},
+    {"Lush Portico", ColorCombination::SELESNYA, ManaSourceSignature::Surveil},
+    {"Shadowy Backstreet", ColorCombination::ORZHOV, ManaSourceSignature::Surveil},
+    {"Underground Mortuary", ColorCombination::GOLGARI, ManaSourceSignature::Surveil},
+    {"Hedge Maze", ColorCombination::SIMIC, ManaSourceSignature::Surveil},
+    {"Thudnering Falls", ColorCombination::IZZET, ManaSourceSignature::Surveil},
+    {"Elegant Parlor", ColorCombination::BOROS, ManaSourceSignature::Surveil},
 };
