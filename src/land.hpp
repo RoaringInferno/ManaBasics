@@ -7,5 +7,5 @@
 typedef struct {
     std::string name;
     ColorCombination colors;
-    LandCycle cycle;
+    ManaSourceSignature cycle;
 } Land;

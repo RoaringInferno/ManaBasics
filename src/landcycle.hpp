@@ -2,10 +2,11 @@
 
 #include "mana.hpp"
 
+#include <unordered_map>
 #include <string>
 
 
-enum LandCycle {
+enum ManaSourceSignature {
     Basic,
     Surveil,
     Gain,
@@ -32,4 +33,31 @@ enum LandCycle {
     Tri
 };
 
-LandCycle getLandCycle(std::string name);
+static std::unordered_map<std::string, ManaSourceSignature> const string_to_land = {
+    {"Basic", ManaSourceSignature::Basic},
+    {"Surveil", ManaSourceSignature::Surveil},
+    {"Gain", ManaSourceSignature::Gain},
+    {"Fast", ManaSourceSignature::Fast},
+    {"Pain", ManaSourceSignature::Pain},
+    {"FetchableTapped", ManaSourceSignature::FetchableTapped},
+    {"Slow", ManaSourceSignature::Slow},
+    {"Reveal", ManaSourceSignature::Reveal},
+    {"KaldheimSnow", ManaSourceSignature::KaldheimSnow},
+    {"Pathway", ManaSourceSignature::Pathway},
+    {"Scry", ManaSourceSignature::Scry},
+    {"Shock", ManaSourceSignature::Shock},
+    {"Guildgate", ManaSourceSignature::Guildgate},
+    {"Check", ManaSourceSignature::Check},
+    {"Generic", ManaSourceSignature::Generic},
+    {"Fetch", ManaSourceSignature::Fetch},
+    {"Artifact", ManaSourceSignature::Artifact},
+    {"Filter", ManaSourceSignature::Filter},
+    {"Bounce", ManaSourceSignature::Bounce},
+    {"Battlebond", ManaSourceSignature::Battlebond},
+    {"OdysseyFilter", ManaSourceSignature::OdysseyFilter},
+    {"Dual", ManaSourceSignature::Dual},
+    {"TriCycle", ManaSourceSignature::TriCycle},
+    {"Tri", ManaSourceSignature::Tri}
+};
+
+ManaSourceSignature getManaSourceSignature(std::string name);

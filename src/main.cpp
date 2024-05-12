@@ -8,7 +8,7 @@
 
 int main(int argc, char** argv) {
     std::string* color_string;
-    if (argc < 1) {
+    if (argc > 1) {
         color_string = new std::string(argv[1]);
     } else {
         std::string temp;
@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 
 
     std::string input;
-    std::set<LandCycle> cycles;
+    std::set<ManaSourceSignature> sources;
     while (true) {
         bool is_dual_land = false;
         bool run = true;
@@ -30,13 +30,13 @@ int main(int argc, char** argv) {
         std::cout << "\n- Surveil\n- Gain\n- Fast\n- Pain\n- FetchableTapped\n- Slow\n- Reveal\n- KaldheimSnow\n- Pathway\n- Scry\n- Shock\n- Guildgate\n- Check\n- Generic\n- Fetch\n- Artifact\n- Filter\n- Bounce\n- Battlebond\n- OdysseyFilter\n- Dual\n- TriCycle\n- Tri\n";
         std::cin >> input;
         if (input == "q") { break; }
-        cycles.insert(getLandCycle(input));
+        sources.insert(getManaSourceSignature(input));
     }
 
     
     std::cout << "Total Manabase: (Type anything to continue)\n";
     for (Land i : lands) {
-        if (auto search = cycles.find(i.cycle); search != cycles.end()) {
+        if (auto search = sources.find(i.cycle); search != sources.end()) {
             if (contains(colors, i.colors)) {
                 std::cout << i.name << "\n";
             }
