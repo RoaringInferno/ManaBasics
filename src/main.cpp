@@ -30,6 +30,7 @@ int main(int argc, char** argv) {
         for (const auto& pair : string_to_ms) {
             std::cout << "\n- " << pair.first;
         }
+        std::cout << "\n";
         std::cin >> input;
         if (input == "q") { break; }
         sources.insert(getManaSourceSignature(input));
