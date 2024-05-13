@@ -90,7 +90,10 @@ static std::unordered_map<std::string, ManaSourceSignature> const string_to_ms =
     {"Borderpost", ManaSourceSignature::Borderpost},
     {"Totem", ManaSourceSignature::Totem},
     {"Cameo", ManaSourceSignature::Cameo},
-    {"Ramos", ManaSourceSignature::Ramos}
+    {"Ramos", ManaSourceSignature::Ramos},
+    {"AmonkhetMonument", ManaSourceSignature::AmonkhetMonument},
+    {"TriSacFetch", ManaSourceSignature::TriSacFetch},
+    {"DesertPing", ManaSourceSignature::DesertPing}
 };
 
 ManaSourceSignature getManaSourceSignature(std::string name);
