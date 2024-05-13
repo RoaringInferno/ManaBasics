@@ -23,14 +23,14 @@ int main(int argc, char** argv) {
 
     std::string input;
     std::set<ManaSourceSignature> sources;
+    std::cout << "Land Cycle Name (q to quit): ";
+    for (const auto& pair : string_to_ms) {
+        std::cout << "\n- " << pair.first;
+    }
+    std::cout << "\n";
     while (true) {
         bool is_dual_land = false;
         bool run = true;
-        std::cout << "Land Cycle Name (q to quit): ";
-        for (const auto& pair : string_to_ms) {
-            std::cout << "\n- " << pair.first;
-        }
-        std::cout << "\n";
         std::cin >> input;
         if (input == "q") { break; }
         sources.insert(getManaSourceSignature(input));

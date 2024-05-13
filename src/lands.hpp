@@ -376,7 +376,7 @@ const Land lands[] = {
     {"Cabaretti Courtyard", ColorCombination::NAYA, ManaSourceSignature::TriSacFetch},
 
     {"Lonely Arroyo", ColorCombination::AZORIUS, ManaSourceSignature::DesertPing},
-    {"Scoured Springs", ColorCombination::DIMIR, ManaSourceSignature::DesertPing},
+    {"Soured Springs", ColorCombination::DIMIR, ManaSourceSignature::DesertPing},
     {"Jagged Barrens", ColorCombination::RAKDOS, ManaSourceSignature::DesertPing},
     {"Bristling Backwoods", ColorCombination::GRUUL, ManaSourceSignature::DesertPing},
     {"Creosote Heath", ColorCombination::SELESNYA, ManaSourceSignature::DesertPing},
