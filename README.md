@@ -33,13 +33,9 @@ Taps for mana, sacs for mana.
 > Colors: 2
 >
 > Enters: Untapped
+
+Half Cycle: Allies
 ### Borderpost
-> Cost: 
->
-> Colors: 
->
-> Enters: 
-### Monument
 > Cost: 3 {1}{A}{B} *
 >
 > Colors: 2
@@ -47,6 +43,18 @@ Taps for mana, sacs for mana.
 > Enters: Tapped
 
 *Alternate Cost: Pay 1 and return a basic land to hand.
+
+Half Cycle: Allies
+### Monument
+> Cost: 3
+>
+> Colors: 2
+>
+> Enters: Untapped
+
+{4}{A}{B}: Animate. 4/4 Dragon Artifact with Flying.
+
+Half Cycle: Allies
 ### Locket
 > Cost: 3
 >
